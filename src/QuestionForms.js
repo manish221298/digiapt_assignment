@@ -101,7 +101,7 @@ class QuestionForms extends React.Component{
                 }
                 {multiple}
                 {
-                    this.state.option === 'MultipleChoice' && this.state.count.length !== 4 ? (<Button size='lg' className="mt-4 mb-5" onClick={this.handleAddOption}>Add option</Button>) : ""
+                    this.state.option === 'MultipleChoice' && this.state.count.length !== 4 ? (<Button size='lg' block className="mt-4 mb-5" onClick={this.handleAddOption}>Add option</Button>) : ""
                 }
                { 
                     this.state.option === 'Checkbox' && (
@@ -115,7 +115,7 @@ class QuestionForms extends React.Component{
                 }
                 {checkBox}
                 {
-                    this.state.option === 'Checkbox' && this.state.count.length !== 4 ? <Button size='lg' className="mt-4 mb-5" onClick={this.handleAddOption}>Add option</Button> : ''
+                    this.state.option === 'Checkbox' && this.state.count.length !== 4 ? <Button size='lg' block className="mt-4 mb-5" onClick={this.handleAddOption}>Add option</Button> : ''
                 }
                 </div>
                     <div className='mt-5' style={{width: "30%", float: "right"}}>
