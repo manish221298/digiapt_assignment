@@ -43,7 +43,7 @@ class QuestionForms extends React.Component{
             return(
                 <div>
                     <input type='radio' name="MultipleChoice" />
-                    <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
+                    <input className="mb-5" placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
                
                </div>
             )
@@ -53,7 +53,7 @@ class QuestionForms extends React.Component{
             return(
                 <div>
                     <input type = 'checkbox' />
-                    <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
+                    <input className="mb-5" placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
                 </div>
             )
         })
@@ -66,7 +66,7 @@ class QuestionForms extends React.Component{
         })
         
         return(
-            <div className="question">
+            <div className="question mb-5">
                 <Container>
                 <Form>
 
@@ -78,7 +78,7 @@ class QuestionForms extends React.Component{
                                     name='question'
                                     value={this.state.question} 
                                     onChange={this.handleChange} 
-                                    placeholder='question' 
+                                    placeholder='Question entered' 
                                     size='lg'
                                     required
                                 />
@@ -86,30 +86,36 @@ class QuestionForms extends React.Component{
                 <br/>
 
                 {
-                    this.state.option === 'Short Answer' && <Form.Control size='lg' as="textarea" placeholder="Enter Explanation" type='text' className='input' />  
+                    this.state.option === 'Short Answer' && <Form.Control size='lg' as="textarea" placeholder="Short answer text" type='text' className='input mb-5' />  
                 }
                 { 
                     this.state.option === 'MultipleChoice' && (
                                                             <div> <input type='radio' name="MultipleChoice" />
-                                                             <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
+                                                             <input className="mb-5" 
+                                                                placeholder="Enter option" 
+                                                                style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} 
+                                                                type="text" />
         
                                                             </div>
                                                         )
                 }
                 {multiple}
                 {
-                    this.state.option === 'MultipleChoice' && this.state.count.length !== 4 ? (<Button className="mt-4" onClick={this.handleAddOption}>Add option</Button>) : ""
+                    this.state.option === 'MultipleChoice' && this.state.count.length !== 4 ? (<Button size='lg' className="mt-4 mb-5" onClick={this.handleAddOption}>Add option</Button>) : ""
                 }
                { 
                     this.state.option === 'Checkbox' && (
                                                             <div> <input type='checkbox' />
-                                                             <input placeholder="Enter option" style={{width: "520px", height: "45px", border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
+                                                             <input className="mb-5" 
+                                                                placeholder="Enter option" 
+                                                                style={{width: "520px", height: "45px", border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} 
+                                                                type="text" />
                                                             </div>
                                                         )
                 }
                 {checkBox}
                 {
-                    this.state.option === 'Checkbox' && this.state.count.length !== 4 ? <Button className="mt-4" onClick={this.handleAddOption}>Add option</Button> : ''
+                    this.state.option === 'Checkbox' && this.state.count.length !== 4 ? <Button size='lg' className="mt-4 mb-5" onClick={this.handleAddOption}>Add option</Button> : ''
                 }
                 </div>
                     <div className='mt-5' style={{width: "30%", float: "right"}}>
