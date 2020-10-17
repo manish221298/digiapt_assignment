@@ -9,8 +9,8 @@ class QuestionForms extends React.Component{
         question: '',
         answer: '',
         select : [ 'choose options','Short Answer', 'MultipleChoice', 'Checkbox' ],
+        count: [],
         option: '',
-        count: []
     }
 }
 
@@ -66,14 +66,14 @@ class QuestionForms extends React.Component{
         })
         
         return(
-            <div>
+            <div className="question">
                 <Container>
                 <Form>
 
                 <div style={{width:"60%",float: "left" }}>
                 
                 <Form.Group controlId='formBasicTitle'>
-                                <Form.Control 
+                                <Form.Control className='mt-5'
                                     type='text' 
                                     name='question'
                                     value={this.state.question} 
@@ -112,7 +112,7 @@ class QuestionForms extends React.Component{
                     this.state.option === 'Checkbox' && this.state.count.length !== 4 ? <Button className="mt-4" onClick={this.handleAddOption}>Add option</Button> : ''
                 }
                 </div>
-                    <div style={{width: "30%", float: "right"}}>
+                    <div className='mt-5' style={{width: "30%", float: "right"}}>
                         <Form.Control as="select" onChange={this.handleSelect} name='option' className='select'>
                             {selectList}
                         </Form.Control><br/>

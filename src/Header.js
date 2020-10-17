@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, Container, Card} from 'react-bootstrap'
+import {Form, Container} from 'react-bootstrap'
 class Header extends React.Component{
     constructor(){
         super()
@@ -21,11 +21,12 @@ class Header extends React.Component{
     }
     render(){
         return (
-            <div className='mt-5'>
+            <div className='mt-5 mb-5 header'>
                 <Container>
-                        <Form onSubmit={this.handleSubmit}>
+                    <div>
+                        <Form  onSubmit={this.handleSubmit}>
                             <Form.Group controlId='formBasicTitle'>
-                                <Form.Control 
+                                <Form.Control  className='mt-5'
                                     type='text' 
                                     name='title'
                                     value={this.state.title} 
@@ -47,6 +48,7 @@ class Header extends React.Component{
                                 />
                             </Form.Group>
                         </Form>
+                        </div>
                 </Container>
             </div>
         )
