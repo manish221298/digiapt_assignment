@@ -42,7 +42,7 @@ class QuestionForms extends React.Component{
             console.log("multiplechoice", item) 
             return(
                 <div>
-                    <input type='radio' />
+                    <input type='radio' name="MultipleChoice" />
                     <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
                
                </div>
@@ -90,7 +90,7 @@ class QuestionForms extends React.Component{
                 }
                 { 
                     this.state.option === 'MultipleChoice' && (
-                                                            <div> <input type='radio' />
+                                                            <div> <input type='radio' name="MultipleChoice" />
                                                              <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
         
                                                             </div>
