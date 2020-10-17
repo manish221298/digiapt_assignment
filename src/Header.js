@@ -26,7 +26,7 @@ class Header extends React.Component{
                     <div>
                         <Form  onSubmit={this.handleSubmit}>
                             <Form.Group controlId='formBasicTitle'>
-                                <Form.Control  className='mt-5'
+                                <Form.Control  className='mt-5' style={{border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}}
                                     type='text' 
                                     name='title'
                                     value={this.state.title} 
@@ -37,7 +37,7 @@ class Header extends React.Component{
                                 />
                             </Form.Group>
                             <Form.Group controlId='formBasicDescription'>
-                                <Form.Control 
+                                <Form.Control style={{border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}}
                                     type='text'
                                     name='description'
                                     value={this.state.description}

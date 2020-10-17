@@ -43,7 +43,7 @@ class QuestionForms extends React.Component{
             return(
                 <div>
                     <input type='radio' />
-                    <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "2px solid black"}} type="text" />
+                    <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
                
                </div>
             )
@@ -53,7 +53,7 @@ class QuestionForms extends React.Component{
             return(
                 <div>
                     <input type = 'checkbox' />
-                    <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "2px solid black"}} type="text" />
+                    <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
                 </div>
             )
         })
@@ -73,7 +73,7 @@ class QuestionForms extends React.Component{
                 <div style={{width:"60%",float: "left" }}>
                 
                 <Form.Group controlId='formBasicTitle'>
-                                <Form.Control className='mt-5'
+                                <Form.Control className='mt-5' style={{border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}}
                                     type='text' 
                                     name='question'
                                     value={this.state.question} 
@@ -91,7 +91,7 @@ class QuestionForms extends React.Component{
                 { 
                     this.state.option === 'MultipleChoice' && (
                                                             <div> <input type='radio' />
-                                                             <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "2px solid black"}} type="text" />
+                                                             <input placeholder="Enter option" style={{width: "520px", height: "45px",  border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
         
                                                             </div>
                                                         )
@@ -103,7 +103,7 @@ class QuestionForms extends React.Component{
                { 
                     this.state.option === 'Checkbox' && (
                                                             <div> <input type='checkbox' />
-                                                             <input placeholder="Enter option" style={{width: "520px", height: "45px", border: "none", borderBottom: "2px solid black"}} type="text" />
+                                                             <input placeholder="Enter option" style={{width: "520px", height: "45px", border: "none", borderBottom: "3px solid rgb(28, 0, 128)"}} type="text" />
                                                             </div>
                                                         )
                 }

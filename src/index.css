@@ -1,5 +1,5 @@
 .App{
-    height: 500px;
+    /* height: 500px; */
     width: 75%;
     background-color: rgb(250, 246, 246);
     margin-left: 170px;
@@ -15,8 +15,8 @@
     margin-bottom: 20px;
     font-family: 'Raleway', sans-serif;
     border-radius: 15px;
-    border-top: 5px solid rgb(228, 24, 228);
-    border-left: 5px solid green;
+    border-left: 5px solid blue;
+    border-top: 5px solid rgb(28, 0, 128);
   
 }
 
@@ -30,8 +30,8 @@
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   border-radius: 15px;
-    border-top: 5px solid rgb(228, 24, 228);
-    border-left: 5px solid green;
+    border-left: 5px solid blue;
+    border-top: 5px solid rgb(0, 9, 128);
 
 }
 
